@@ -108,7 +108,7 @@ body {
 .navigation {
   display: flex;
   margin-top: 32px;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px;*/
 }
 
 .navigation li:not(:last-child) {
@@ -119,11 +119,22 @@ body {
   color: var(--accent-color);
 }
 
+.navigation .link.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .nav-title {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
+  margin-bottom: 28px;
 }
 
 .connection {
@@ -556,6 +567,26 @@ li.connect-item:not(:last-child) {
   color: var(--secondary-text-color);
 }
 
+.portfolio-img {
+  display: block;
+  position: relative;
+}
+
+/*.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--other-color-text);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+}*/
+
 /*========= END PORTFOLIO====*/
 
 /*=========Модальное окно====*/
@@ -589,16 +620,18 @@ li.connect-item:not(:last-child) {
   border-radius: 4px;
 }
 
-/*.modal-icon {
-  width: 18px;
-  height: 18px;
-}*/
+.modal-icon {
+  width: 11px;
+  height: 11px;
+}
 
 .close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 30px;
   height: 30px;
