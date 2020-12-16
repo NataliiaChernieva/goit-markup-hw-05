@@ -93,16 +93,20 @@ body {
   line-height: 1.192;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: inherit;
+  color: var(--primary-text-color);
   margin-right: 93px;
   margin-top: 24px;
   margin-bottom: 25px;
   min-width: 145px;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .link {
   color: inherit;
   text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .navigation {
@@ -155,6 +159,14 @@ li.connect-item:not(:last-child) {
   color: var(--secondary-text-color);
   font-style: normal;
   text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
+}
+
+.connect-icon {
+  fill: var(--secondary-text-color);
+
+  transition: fill 2500ms var(--timing-function);
 }
 
 /*=============END HEADER=======*/
@@ -203,10 +215,12 @@ li.connect-item:not(:last-child) {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  /*border: 1px solid transparent;*/
   padding: 10px 32px;
   cursor: pointer;
   margin: auto auto;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
 .button p {
@@ -372,17 +386,6 @@ li.connect-item:not(:last-child) {
   height: 44px;
 }
 
-.social-list-link:hover .link-icon,
-.social-list-link:focus .link-icon {
-  fill: var(--other-color-text);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--accent-color);
-  border-radius: 50%;
-}
-
 .decor:not(:last-child) {
   margin-right: 10px;
 }
@@ -407,16 +410,8 @@ li.connect-item:not(:last-child) {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-}
 
-.clients-link:focus .clients-icon,
-.clients-link:hover .clients-icon {
-  fill: var(--accent-color);
-}
-
-.clients-link:focus,
-.clients-link:hover {
-  border-color: var(--accent-color);
+  transition: border 250ms var(--timing-function);
 }
 
 .clients-item:not(:last-child) {
@@ -427,6 +422,8 @@ li.connect-item:not(:last-child) {
   fill: #afb1b8;
   /*widht: 44px;*/
   height: 49px;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 /*=========  END Постоянные клиенты====*/
@@ -445,6 +442,8 @@ li.connect-item:not(:last-child) {
 .el {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .addresses:not(:last-child) {
@@ -522,6 +521,9 @@ li.connect-item:not(:last-child) {
   box-sizing: border-box;
   width: 370px;
   border: 1px solid #eeeeee;
+  box-shadow: 0;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .type:not(:nth-child(3n)) {
@@ -543,6 +545,7 @@ li.connect-item:not(:last-child) {
 
 .portfolio-button {
   background-color: var(--other-bg-color);
+  color: var(--primary-text-color);
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
@@ -552,6 +555,10 @@ li.connect-item:not(:last-child) {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 .portfolio-title {
   font-weight: 700;
@@ -592,7 +599,7 @@ li.connect-item:not(:last-child) {
   letter-spacing: 0.03em;
 
   transform: translateY(100%);
-  transition: transform 500ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 
 /*========= END PORTFOLIO====*/
@@ -675,6 +682,7 @@ li.connect-item:not(:last-child) {
 .connect:focus .connect-icon {
   fill: var(--accent-color);
 }
+
 .type:hover,
 .type:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -684,4 +692,27 @@ li.connect-item:not(:last-child) {
 .link-decoration:hover .overlay,
 .link-decoration:focus .overlay {
   transform: translateY(0);
+}
+
+.clients-link:focus,
+.clients-link:hover {
+  border-color: var(--accent-color);
+}
+
+.clients-link:focus .clients-icon,
+.clients-link:hover .clients-icon {
+  fill: var(--accent-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  transition: background-color 250ms var(--timing-function);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.social-list-link:hover .link-icon,
+.social-list-link:focus .link-icon {
+  transition: fill 250ms var(--timing-function);
+  fill: var(--other-color-text);
 }
