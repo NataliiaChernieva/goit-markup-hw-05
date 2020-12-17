@@ -219,18 +219,25 @@ li.connect-item:not(:last-child) {
   cursor: pointer;
   margin: auto auto;
 
-  transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
-}
-
-.button p {
   font-family: inherit;
   color: var(--other-color-text);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
+
+/*.button p {
+  font-family: inherit;
+  color: var(--other-color-text);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+}*/
 
 /*==========END HERO==========*/
 
@@ -521,9 +528,9 @@ li.connect-item:not(:last-child) {
   box-sizing: border-box;
   width: 370px;
   border: 1px solid #eeeeee;
-  box-shadow: 0;
+  /*box-shadow: 0;*/
 
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow 2500ms var(--timing-function);
 }
 
 .type:not(:nth-child(3n)) {
